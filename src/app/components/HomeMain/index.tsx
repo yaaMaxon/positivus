@@ -1,6 +1,7 @@
 import Image from "next/image";
 import homeIllustration from "@assets/img/homeIllustration.webp";
 import homeIllustrationDesk from "@assets/img/homeIllustrationDesk.webp";
+import Button from "../Button";
 import SocialPlatforms from "../SocialPlatforms";
 
 const HomeMain = () => {
@@ -21,12 +22,7 @@ const HomeMain = () => {
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.
           </p>
-          <button
-            type="button"
-            className="bg-dark text-white text-[20px] px-[35px] py-5 rounded-[14px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1"
-          >
-            Book a consultation
-          </button>
+          <Button className="bg-dark text-white">Book a consultation</Button>
         </div>
         <Image
           src={homeIllustrationDesk}

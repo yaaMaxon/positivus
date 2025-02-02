@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Button from "../Button";
 import HomeServicesList from "../HomeServicesList";
 import freePropose from "@assets/img/freePropose.webp";
 
@@ -24,12 +25,7 @@ const HomeServices = () => {
             Contact us today to learn more about how our digital marketing
             services can help your business grow and succeed online.
           </p>
-          <button
-            type="button"
-            className="bg-dark text-white text-[20px] px-[35px] py-5 cursor-pointer rounded-[14px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1"
-          >
-            Get your proposal
-          </button>
+          <Button className="bg-dark text-white">Get your proposal</Button>
         </div>
         <Image
           src={freePropose}
