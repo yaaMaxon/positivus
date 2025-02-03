@@ -32,7 +32,7 @@ const HomeTeam = () => {
         <h2 className="text-[36px] lg:text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
           Team
         </h2>
-        <p className="lg:text-lg text-center lg:text-start lg:max-w-[580px]">
+        <p className="lg:text-lg text-center lg:text-start lg:max-w-[473px]">
           Meet the skilled and experienced team behind our successful digital
           marketing strategies
         </p>

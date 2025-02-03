@@ -2,9 +2,11 @@ import HomeMain from "./components/HomeMain";
 import HomeServices from "./components/HomeServices";
 import CaseBox from "./components/CaseBox";
 import QuestionBox from "./components/QuestionBox";
+import HomeTeam from "./components/HomeTeam";
+import Testimonials from "./components/Testimonials";
+import ContactUsForm from "./components/ContactUsForm";
 import { caseStudiesList } from "./types/CaseStudiesSettings";
 import { workingQuestions } from "./types/WorkingQuestionsSettings";
-import HomeTeam from "./components/HomeTeam";
 
 const Home = () => {
   return (
@@ -33,6 +35,12 @@ const Home = () => {
       </div>
       <div className="mb-[60px] lg:mb-[90px]">
         <HomeTeam />
+      </div>
+      <div className="mb-[60px] lg:mb-[140px]">
+        <Testimonials />
+      </div>
+      <div className="mb-[60px] lg:mb-[140px]">
+        <ContactUsForm />
       </div>
     </div>
   );
