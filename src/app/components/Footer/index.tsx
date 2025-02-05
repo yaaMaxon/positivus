@@ -5,8 +5,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import Link from "next/link";
 import StarLogo from "@assets/icons/starLogo.svg";
 import PositivusLogo from "@assets/icons/positivusLogo.svg";
-import { navigatPages } from "../../types/NavigatSettings";
-import Button from "../Button";
+import { navigatPages } from "../../constants/NavigatSettings";
 import MySocialNetworks from "../MySocialNetworks";
 
 interface ISupportForm {
@@ -118,10 +117,9 @@ const Footer = () => {
               </span>
             )}
           </div>
-          {/* <button className="bg-green text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+          <button className="bg-green text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
             Subscribe to news
-          </button> */}
-          <Button className="bg-green">Subscribe to news</Button>
+          </button>
         </form>
       </div>
       <div className="lg:hidden">

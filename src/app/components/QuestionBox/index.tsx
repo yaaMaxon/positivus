@@ -1,9 +1,10 @@
 "use client";
 
-import PlusIcon from "@assets/icons/plus.svg";
-import MinusIcon from "@assets/icons/minus.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import PlusIcon from "@assets/icons/plus.svg";
+import MinusIcon from "@assets/icons/minus.svg";
+import SectionTab from "../SectionTab";
 
 type Props = {
   spanText?: string;
@@ -33,24 +34,13 @@ const QuestionBox = ({
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 mb-[30px] lg:mb-[85px]">
-        <h2 className="hidden lg:block text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
-          {spanText}
-        </h2>
-        <h2 className="flex lg:hidden flex-col items-center">
-          <span className={`bg-green text-[36px] px-[7px] rounded-[7px]`}>
-            {spanStartTextMb}
-          </span>
-          <span className={`bg-green text-[36px] px-[7px] rounded-[7px]`}>
-            {spanEndTextMb}
-          </span>
-        </h2>
-        {paragraphText && (
-          <p className="lg:text-lg text-center lg:text-start lg:max-w-[292px]">
-            {paragraphText}
-          </p>
-        )}
-      </div>
+      <SectionTab
+        title={spanText}
+        description={paragraphText}
+        wrapperClassName="mb-10 lg:mb-[85px]"
+        descriptionClassName="lg:max-w-[292px]"
+        subTitles={[spanStartTextMb, spanEndTextMb]}
+      />
       <ul className="flex gap-5 flex-col lg:gap-[30px]">
         {questionsList.map(({ number, question, answer }, index) => (
           <li

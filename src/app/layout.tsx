@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
-// import StoreProvider from "./components/StoreProvider";
 
 const grotesk = Space_Grotesk({
   weight: ["400", "500"],
@@ -23,11 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={grotesk.className}>
-        {/* <StoreProvider> */}
         <NavBar />
         {children}
         <Footer />
-        {/* </StoreProvider> */}
       </body>
     </html>
   );

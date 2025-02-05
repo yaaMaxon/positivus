@@ -7,6 +7,8 @@ import Button from "../Button";
 import { teamList } from "./TeamSettings";
 import frame from "@assets/img/frame.webp";
 import LinkeDin from "@assets/icons/linkedin.svg";
+import SectionTab from "../SectionTab";
+import { homeTeam } from "@/app/constants/titleSectionSettings";
 
 const HomeTeam = () => {
   const [visibleCount, setVisibleCount] = useState(4);
@@ -28,15 +30,12 @@ const HomeTeam = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 mb-10 lg:mb-[85px]">
-        <h2 className="text-[36px] lg:text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
-          Team
-        </h2>
-        <p className="lg:text-lg text-center lg:text-start lg:max-w-[473px]">
-          Meet the skilled and experienced team behind our successful digital
-          marketing strategies
-        </p>
-      </div>
+      <SectionTab
+        title={homeTeam.title}
+        description={homeTeam.description}
+        wrapperClassName="mb-10 lg:mb-[85px]"
+        descriptionClassName="lg:max-w-[473px]"
+      />
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] lg:gap-10 mb-[39px] lg:mb-0">
         {teamList
           .slice(0, isDesktop ? teamList.length : visibleCount)

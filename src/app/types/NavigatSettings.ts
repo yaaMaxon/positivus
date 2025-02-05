@@ -1,1 +1,0 @@
-export const navigatPages = [{page: "About us", path: "/aboutUs"}, {page: "Services", path: "/services"}, {page: "Use Cases", path: "/useCases"}, {page: "Pricing", path: "/pricing"}, {page: "Blog", path: "/blog"}];

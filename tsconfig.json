@@ -19,18 +19,19 @@
     "incremental": true,
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ],
-      "@assets/icons": [
-        "./src/assets/icons/*"
+      "@assets/*": [
+        "./assets/*"
       ],
-      "@assets/img": [
-        "./src/assets/img/*"
+      "@components/*": [
+        "./app/components/*"
       ],
-      "@components": [
-        "./src/app/components/*"
+       "@constants/*": [
+        "./app/constants/*"
       ]
     },
+    "baseUrl": "src",
     "plugins": [
       {
         "name": "next"

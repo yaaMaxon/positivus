@@ -1,32 +1,43 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { socialPlatforms } from "@/app/types/SocialPlatforms";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/autoplay";
+import { Autoplay, FreeMode } from "swiper/modules";
+import { socialPlatforms } from "@/app/constants/SocialPlatforms";
 
-const SocialPlatforms = () => {
+type Props = {
+  ltr?: boolean;
+};
+
+const SocialPlatforms = ({ ltr = true }: Props) => {
   return (
-    <div className="overflow-hidden w-full py-5">
-      <motion.ul
-        className="flex gap-14 w-full"
-        initial={{ x: 0 }}
-        animate={{ x: "-100%" }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 10,
+    <div className="w-full py-5">
+      <Swiper
+        modules={[Autoplay, FreeMode]}
+        spaceBetween={56}
+        slidesPerView="auto"
+        freeMode={true}
+        grabCursor={true}
+        loop={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+        }}
+        speed={3000}
+        dir={ltr ? "ltr" : "rtl"}
+        style={{
+          direction: ltr ? "ltr" : "rtl",
         }}
       >
-        {[
-          ...socialPlatforms,
-          ...socialPlatforms,
-          ...socialPlatforms,
-          ...socialPlatforms,
-        ].map(({ icon }, index) => (
-          <li key={index} className="flex-shrink-0">
+        {[...socialPlatforms, ...socialPlatforms].map(({ icon }, index) => (
+          <SwiperSlide key={index} className="!w-auto">
             {icon}
-          </li>
+          </SwiperSlide>
         ))}
-      </motion.ul>
+      </Swiper>
     </div>
   );
 };

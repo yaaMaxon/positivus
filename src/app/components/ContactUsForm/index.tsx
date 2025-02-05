@@ -1,9 +1,9 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import Image from "next/image";
-import Button from "../Button";
-import contactUsImg from "@assets/img/contactUsImg.webp";
+import IllustrationContactUs from "@assets/icons/illustrationContactUs.svg";
+import SectionTab from "../SectionTab";
+import { homeContactUs } from "@/app/constants/titleSectionSettings";
 
 export interface ISupportForm {
   name: string;
@@ -17,7 +17,7 @@ const ContactUsForm = () => {
     name: "",
     email: "",
     message: "",
-    contactReason: "say_hi", // За замовчуванням "Say Hi"
+    contactReason: "say_hi",
   };
 
   const {
@@ -37,17 +37,14 @@ const ContactUsForm = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 mb-10 lg:mb-[85px]">
-        <h2 className="text-[36px] lg:text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
-          Contact Us
-        </h2>
-        <p className="lg:text-lg text-center lg:text-start lg:max-w-[323px]">
-          Connect with Us: Let`s Discuss Your Digital Marketing Needs
-        </p>
-      </div>
-
+      <SectionTab
+        title={homeContactUs.title}
+        description={homeContactUs.description}
+        wrapperClassName="mb-10 lg:mb-[85px]"
+        descriptionClassName="lg:max-w-[323px]"
+      />
       <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-        <div className="flex flex-col lg:flex-row lg:relative bg-gray rounded-[45px] px-[30px] lg:px-[100px] lg:pt-[60px] lg:pb-20 py-[40px]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:relative bg-gray rounded-[45px] px-[30px] lg:px-[100px] lg:pt-[60px] lg:pb-20 py-[40px]">
           <div className="flex flex-col gap-[36px] lg:gap-[40px]">
             <div className="flex gap-6 mr-auto ml-auto">
               <label className="flex items-center gap-[15px] cursor-pointer lg:text-[18px]">
@@ -111,7 +108,17 @@ const ContactUsForm = () => {
                 <input
                   id="email"
                   className="text-[#898989] placeholder-[#898989] lg:text-[18px] py-[18px] px-5 lg:px-[30px] border border-black rounded-[14px]"
-                  {...register("email", { required: "Email is required!" })}
+                  {...register("email", {
+                    required: "Email is required!",
+                    minLength: {
+                      value: 10,
+                      message: "The email must be more than 10 symbols",
+                    },
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: "Invalid email format",
+                    },
+                  })}
                   placeholder="Email"
                 />
                 {errors.email && (
@@ -139,22 +146,16 @@ const ContactUsForm = () => {
                 )}
               </div>
             </div>
-            <div className="hidden lg:block">
-              <Button className="bg-dark w-full text-white">
-                Send Message
-              </Button>
-            </div>
+            <button className="hidden lg:block bg-dark text-white text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+              Subscribe to news
+            </button>
           </div>
-
-          <Image
-            src={contactUsImg}
-            alt="contact-us"
-            className="absolute left-[620px] hidden lg:block"
-          />
+          <IllustrationContactUs className="absolute right-0 hidden lg:block" />
         </div>
-
-        <div className="mt-[30px] flex justify-center lg:hidden">
-          <Button className="bg-dark text-white">Send Message</Button>
+        <div className="flex justify-center">
+          <button className="mt-[30px] lg:hidden bg-dark text-white text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+            Subscribe to news
+          </button>
         </div>
       </form>
     </div>

@@ -27,10 +27,11 @@ const HomeMain = () => {
         <Image
           src={homeIllustrationDesk}
           alt="homeIllustrationDesk"
-          className="hidden lg:block"
+          className="w-[430px] my-auto lg:w-[600px] object-contain hidden lg:block"
         />
       </div>
       <SocialPlatforms />
+      <SocialPlatforms ltr={false} />
     </div>
   );
 };

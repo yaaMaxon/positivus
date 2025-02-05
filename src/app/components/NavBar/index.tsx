@@ -8,7 +8,7 @@ import StarLogo from "@assets/icons/starLogo.svg";
 import PositivusLogo from "@assets/icons/positivusLogo.svg";
 import BurgerMenu from "@assets/icons/burgerMenu.svg";
 import { MdClose } from "react-icons/md";
-import { navigatPages } from "../../types/NavigatSettings";
+import { navigatPages } from "../../constants/NavigatSettings";
 import MobileMenu from "../MobileMenu";
 
 const NavBar = () => {
@@ -102,7 +102,7 @@ const NavBar = () => {
               type="button"
               className="text-[20px] border border-[#191A23] rounded-[14px] px-[35px] py-5 bg-transparent transition-all duration-300"
               whileHover={{
-                backgroundColor: "  #B9FF66",
+                backgroundColor: " #B9FF66",
                 y: -5,
               }}
               whileTap={{

@@ -9,7 +9,9 @@ import "swiper/css/navigation";
 import ArrowRightIcon from "@/assets/icons/arrowRight.svg";
 import ArrowLeftIcon from "@/assets/icons/arrowLeft.svg";
 import StarIcon from "@/assets/icons/star.svg";
-import { testimonialsList } from "@/app/types/TestimonialsSettings";
+import { testimonialsList } from "@/app/constants/TestimonialsSettings";
+import { testimonials } from "@/app/constants/titleSectionSettings";
+import SectionTab from "../SectionTab";
 
 const TOTAL_STARS = 6;
 
@@ -40,20 +42,17 @@ const Testimonials = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 mb-10 lg:mb-[85px]">
-        <h2 className="text-[36px] lg:text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
-          Testimonials
-        </h2>
-        <p className="lg:text-lg text-center lg:text-start lg:max-w-[473px]">
-          Hear from Our Satisfied Clients: Read Our Testimonials to Learn More
-          about Our Digital Marketing Services
-        </p>
-      </div>
-
+      <SectionTab
+        title={testimonials.title}
+        description={testimonials.description}
+        wrapperClassName="mb-10 lg:mb-[85px]"
+        descriptionClassName="lg:max-w-[473px]"
+      />
       <div className="flex flex-col gap-[60px] lg:gap-[124px] bg-dark px-[30px] lg:px-0 pt-[30px] lg:pt-[84px] pb-[60px] lg:pb-[68px] rounded-[45px]">
         {testimonialsList.length > 0 ? (
           <Swiper
             className="w-full h-auto min-h-[200px]"
+            spaceBetween={20}
             slidesPerView={1}
             centeredSlides={true}
             navigation={{

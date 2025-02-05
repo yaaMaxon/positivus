@@ -5,8 +5,8 @@ import QuestionBox from "./components/QuestionBox";
 import HomeTeam from "./components/HomeTeam";
 import Testimonials from "./components/Testimonials";
 import ContactUsForm from "./components/ContactUsForm";
-import { caseStudiesList } from "./types/CaseStudiesSettings";
-import { workingQuestions } from "./types/WorkingQuestionsSettings";
+import { caseStudiesList } from "./constants/CaseStudiesSettings";
+import { workingQuestions } from "./constants/WorkingQuestionsSettings";
 
 const Home = () => {
   return (

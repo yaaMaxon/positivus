@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { mySocialNetworks } from "@/app/types/MySocialNetworks";
+import { mySocialNetworks } from "@/app/constants/MySocialNetworks";
 
 const MySocialNetworks = () => {
   return (

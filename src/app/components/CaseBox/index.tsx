@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ArrowGreen from "@assets/icons/arrowGreen.svg";
+import SectionTab from "@components/SectionTab";
 
 type Props = {
   spanText: string;
@@ -13,14 +14,12 @@ type Props = {
 const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 mb-10 lg:mb-[85px]">
-        <h2 className="text-[36px] lg:text-[40px] font-medium bg-green rounded-[7px] px-[7px]">
-          {spanText}
-        </h2>
-        <p className="lg:text-lg text-center lg:text-start lg:max-w-[580px]">
-          {paragraphText}
-        </p>
-      </div>
+      <SectionTab
+        title={spanText}
+        description={paragraphText}
+        wrapperClassName="mb-10 lg:mb-[85px]"
+        descriptionClassName="lg:max-w-[580px]"
+      />
       <ul className="hidden lg:flex gap-[64px] bg-dark py-[70px] px-[60px] rounded-[45px]">
         {listItems.map(({ extraSpan, text }, index) => (
           <li
