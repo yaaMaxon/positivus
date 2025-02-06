@@ -9,7 +9,7 @@ import { useCasesList } from "../constants/UseCasesSettings";
 
 const Services = () => {
   return (
-    <div className="px-5 lg:px-[100px]">
+    <main className="px-5 lg:px-[100px]">
       <div className="mt-10 lg:mt-[80px] mb-[35px] lg:mb-10">
         <Preview
           title="Expert Digital Marketing Services"
@@ -36,7 +36,7 @@ const Services = () => {
       <div className="mb-[60px] lg:mb-[140px]">
         <ElevateYourRanking />
       </div>
-    </div>
+    </main>
   );
 };
 

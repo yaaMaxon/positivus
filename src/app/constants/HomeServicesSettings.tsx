@@ -4,8 +4,7 @@ import socialMediaImg from "@assets/img/socialMedia.webp";
 import emailImg from "@assets/img/email.webp";
 import contentImg from "@assets/img/content.webp";
 import analyticsImg from "@assets/img/analytics.webp";
-import ArrowBlackIcon from "@assets/icons/arrowBlack.svg";
-import ArrowWhiteIcon from "@assets/icons/arrowWhite.svg";
+import LinkIcon from "@assets/icons/linkIcon.svg";
 
 export const servicesList = [
   {
@@ -16,7 +15,7 @@ export const servicesList = [
     bgColor: "bg-gray",
     bgTextColor: "bg-green",
     learnMore: "text-black",
-    icon: <ArrowBlackIcon />,
+    icon: <LinkIcon className="fill-dark text-green" />,
   },
   {
     src: payPerClickImg,
@@ -26,7 +25,7 @@ export const servicesList = [
     bgColor: "bg-green",
     bgTextColor: "bg-white",
     learnMore: "text-black",
-    icon: <ArrowBlackIcon />,
+    icon: <LinkIcon className="fill-dark text-green" />,
   },
   {
     src: socialMediaImg,
@@ -36,7 +35,7 @@ export const servicesList = [
     bgColor: "bg-dark",
     bgTextColor: "bg-white",
     learnMore: "text-white",
-    icon: <ArrowWhiteIcon />,
+    icon: <LinkIcon className="fill-white text-dark" />,
   },
   {
     src: emailImg,
@@ -46,7 +45,7 @@ export const servicesList = [
     bgColor: "bg-gray",
     bgTextColor: "bg-green",
     learnMore: "text-black",
-    icon: <ArrowBlackIcon />,
+    icon: <LinkIcon className="fill-dark text-green" />,
   },
   {
     src: contentImg,
@@ -56,7 +55,7 @@ export const servicesList = [
     bgColor: "bg-green",
     bgTextColor: "bg-white",
     learnMore: "text-black",
-    icon: <ArrowBlackIcon />,
+    icon: <LinkIcon className="fill-dark text-green" />,
   },
   {
     src: analyticsImg,
@@ -66,6 +65,6 @@ export const servicesList = [
     bgColor: "bg-dark",
     bgTextColor: "bg-green",
     learnMore: "text-white",
-    icon: <ArrowWhiteIcon />,
+    icon: <LinkIcon className="fill-white text-dark" />,
   },
 ];

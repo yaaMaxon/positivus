@@ -4,7 +4,7 @@ import { frequantlyQuestions } from "../constants/FrequantlyQuestionsSettings";
 
 const Pricing = () => {
   return (
-    <div className="px-5 lg:px-[100px]">
+    <main className="px-5 lg:px-[100px]">
       <div className="mt-10 lg:mt-[60px] mb-[60px] lg:mb-[140px]">
         <PricingPlans />
       </div>
@@ -16,7 +16,7 @@ const Pricing = () => {
           questionsList={frequantlyQuestions}
         />
       </div>
-    </div>
+    </main>
   );
 };
 

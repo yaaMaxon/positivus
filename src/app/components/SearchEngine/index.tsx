@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import BackIcon from "@assets/icons/back.svg";
+import LinkIcon from "@assets/icons/LinkIcon.svg";
 import StarIcon from "@assets/icons/star.svg";
 import Button from "../Button";
 
@@ -26,7 +26,7 @@ const SearchEngine = () => {
               },
             }}
           >
-            <BackIcon />
+            <LinkIcon className="fill-dark text-green rotate-[240deg]" />
           </motion.div>
           Back
         </motion.button>

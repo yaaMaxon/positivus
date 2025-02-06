@@ -5,7 +5,7 @@ import JoinOurTeam from "@assets/icons/joinOurTeam.svg";
 
 const UseCases = () => {
   return (
-    <div className="px-5 lg:px-[100px]">
+    <main className="px-5 lg:px-[100px]">
       <div className="mt-10 lg:mt-[80px] mb-[60px] lg:mb-[140px]">
         <Preview
           title="Together for Success"
@@ -22,7 +22,7 @@ const UseCases = () => {
           className="bg-green shadow-[0px_5px_0px_0px_#191A23]"
         />
       </div>
-    </div>
+    </main>
   );
 };
 

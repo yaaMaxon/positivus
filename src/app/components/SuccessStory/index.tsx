@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import StarIcon from "@assets/icons/star.svg";
-import ArrowRead from "@assets/icons/arrowRead.svg";
+import LinkIcon from "@assets/icons/linkIcon.svg";
 import { successStoryList } from "@/app/constants/SuccessStorySettings";
 
 const SuccessStory = () => {
@@ -63,7 +63,7 @@ const SuccessStory = () => {
               },
             }}
           >
-            <ArrowRead />
+            <LinkIcon className="fill-green text-dark" />
           </motion.div>
           Read
         </motion.button>

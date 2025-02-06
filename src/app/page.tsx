@@ -10,7 +10,7 @@ import { workingQuestions } from "./constants/WorkingQuestionsSettings";
 
 const Home = () => {
   return (
-    <div className="px-5 lg:px-[100px]">
+    <main className="px-5 lg:px-[100px]">
       <div className="mt-[40px] lg:mt-[70px]">
         <HomeMain />
       </div>
@@ -42,7 +42,7 @@ const Home = () => {
       <div className="mb-[60px] lg:mb-[140px]">
         <ContactUsForm />
       </div>
-    </div>
+    </main>
   );
 };
 

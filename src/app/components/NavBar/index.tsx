@@ -20,6 +20,10 @@ const NavBar = () => {
     setMobileMenuState((prev) => !prev);
   };
 
+  const handleMenuClose = () => {
+    setMobileMenuState(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -55,6 +59,7 @@ const NavBar = () => {
         <nav className="flex justify-between items-center">
           <Link
             href="/"
+            onClick={handleMenuClose}
             className="flex items-center gap-2 transition-all duration-300 transform hover:scale-105"
           >
             <StarLogo />
@@ -72,7 +77,7 @@ const NavBar = () => {
             )}
           </button>
           <div className="hidden lg:flex items-center gap-10">
-            <ul className="flex items-center gap-10">
+            <ul className="flex items-center lg:gap-5 xl:gap-10">
               {navigatPages.map(({ page, path }) => (
                 <motion.li
                   key={page}
@@ -91,7 +96,7 @@ const NavBar = () => {
                       pathname === path
                         ? "bg-green px-2.5 py-[5px] rounded-[9px]"
                         : ""
-                    } text-[20px] hover:bg-green hover:px-2.5 hover:py-[5px] hover:rounded-[9px] transition-all duration-300`}
+                    } lg:text-lg xl:text-[20px] hover:bg-green hover:px-2.5 hover:py-[5px] hover:rounded-[9px] transition-all duration-300`}
                   >
                     {page}
                   </Link>
@@ -100,9 +105,9 @@ const NavBar = () => {
             </ul>
             <motion.button
               type="button"
-              className="text-[20px] border border-[#191A23] rounded-[14px] px-[35px] py-5 bg-transparent transition-all duration-300"
+              className="lg:text-lg xl:text-[20px] border border-[#191A23] rounded-[14px] lg:px-5 lg:py-2 xl:px-[35px] xl:py-5 bg-transparent transition-all duration-300"
               whileHover={{
-                backgroundColor: " #B9FF66",
+                backgroundColor: "#B9FF66",
                 y: -5,
               }}
               whileTap={{

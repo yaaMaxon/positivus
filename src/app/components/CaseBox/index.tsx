@@ -1,8 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import ArrowGreen from "@assets/icons/arrowGreen.svg";
+import LinkIcon from "@assets/icons/linkIcon.svg";
 import SectionTab from "@components/SectionTab";
 
 type Props = {
@@ -36,9 +37,27 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
               </span>
             )}
             <p className="text-lg text-white">{text}</p>
-            <span className="flex items-center gap-[15px] text-[20px] text-green cursor-pointer">
-              Learn more <ArrowGreen />
-            </span>
+            <motion.button
+              type="button"
+              className="flex items-center gap-1 text-[20px] text-green cursor-pointer"
+              whileHover="wiggle"
+            >
+              Learn more
+              <motion.div
+                variants={{
+                  wiggle: {
+                    rotate: [0, -5, 5, -5, 5, 0],
+                    transition: {
+                      duration: 0.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  },
+                }}
+              >
+                <LinkIcon className="text-green" />
+              </motion.div>
+            </motion.button>
           </li>
         ))}
       </ul>
@@ -59,9 +78,27 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
                   </span>
                 )}
                 <p className="text-white">{text}</p>
-                <div className="flex items-center gap-[15px] text-[20px] text-green cursor-pointer">
-                  Learn more <ArrowGreen />
-                </div>
+                <motion.button
+                  type="button"
+                  className="flex items-center gap-1 text-[20px] text-green cursor-pointer"
+                  whileHover="wiggle"
+                >
+                  Learn more
+                  <motion.div
+                    variants={{
+                      wiggle: {
+                        rotate: [0, -5, 5, -5, 5, 0],
+                        transition: {
+                          duration: 0.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                      },
+                    }}
+                  >
+                    <LinkIcon className="text-green" />
+                  </motion.div>
+                </motion.button>
               </div>
             </SwiperSlide>
           ))}

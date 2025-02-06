@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import ArrowRead from "@assets/icons/arrowRead.svg";
+import LinkIcon from "@assets/icons/linkIcon.svg";
 
 interface TableItems {
   title: string;
@@ -41,7 +41,7 @@ const TableBox = ({ tableList }: Props) => {
           <p className="lg:text-lg">{description}</p>
           <motion.button
             type="button"
-            className="flex items-center gap-[15px] text-green text-[20px]"
+            className="flex items-center gap-[15px] text-[20px]"
             whileHover="wiggle"
           >
             <motion.div
@@ -56,7 +56,7 @@ const TableBox = ({ tableList }: Props) => {
                 },
               }}
             >
-              <ArrowRead />
+              <LinkIcon className="fill-green text-dark" />
             </motion.div>
             {link}
           </motion.button>

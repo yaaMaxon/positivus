@@ -1,4 +1,3 @@
-// import Button from "../Button";
 import ServicesList from "../ServicesList";
 import SectionTab from "@components/SectionTab";
 import { homeServices } from "@constants/titleSectionSettings";

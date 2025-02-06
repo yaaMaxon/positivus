@@ -44,8 +44,8 @@ const ContactUsForm = () => {
         descriptionClassName="lg:max-w-[323px]"
       />
       <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:relative bg-gray rounded-[45px] px-[30px] lg:px-[100px] lg:pt-[60px] lg:pb-20 py-[40px]">
-          <div className="flex flex-col gap-[36px] lg:gap-[40px]">
+        <div className="flex gap-[50px] flex-col lg:flex-row lg:justify-between  bg-gray rounded-[45px] px-[30px] lg:px-[100px] lg:pt-[60px] lg:pb-20 py-[40px] lg:pr-0">
+          <div className="flex grow flex-col gap-[36px] lg:gap-[40px]">
             <div className="flex gap-6 mr-auto ml-auto">
               <label className="flex items-center gap-[15px] cursor-pointer lg:text-[18px]">
                 <input
@@ -150,7 +150,7 @@ const ContactUsForm = () => {
               Subscribe to news
             </button>
           </div>
-          <IllustrationContactUs className="absolute right-0 hidden lg:block" />
+          <IllustrationContactUs className="hidden lg:block" />
         </div>
         <div className="flex justify-center">
           <button className="mt-[30px] lg:hidden bg-dark text-white text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
