@@ -96,7 +96,7 @@ const NavBar = () => {
                       pathname === path
                         ? "bg-green px-2.5 py-[5px] rounded-[9px]"
                         : ""
-                    } lg:text-lg xl:text-[20px] hover:bg-green hover:px-2.5 hover:py-[5px] hover:rounded-[9px] transition-all duration-300`}
+                    } lg:text-lg xl:text-xl hover:bg-green hover:px-2.5 hover:py-[5px] hover:rounded-[9px] transition-all duration-300`}
                   >
                     {page}
                   </Link>
@@ -105,7 +105,7 @@ const NavBar = () => {
             </ul>
             <motion.button
               type="button"
-              className="lg:text-lg xl:text-[20px] border border-[#191A23] rounded-[14px] lg:px-5 lg:py-2 xl:px-[35px] xl:py-5 bg-transparent transition-all duration-300"
+              className="lg:text-lg xl:text-xl border border-[#191A23] rounded-[14px] lg:px-5 lg:py-2 xl:px-[35px] xl:py-5 bg-transparent transition-all duration-300"
               whileHover={{
                 backgroundColor: "#B9FF66",
                 y: -5,

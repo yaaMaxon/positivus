@@ -11,7 +11,7 @@ const SearchEngine = () => {
       <div className="mb-[50px] lg:mb-[40px]">
         <motion.button
           type="button"
-          className="flex items-center gap-[15px] text-[20px]"
+          className="flex items-center gap-[15px] text-xl"
           whileHover="wiggle"
         >
           <motion.div
@@ -52,10 +52,10 @@ const SearchEngine = () => {
             Search engine optimization
           </span>
           <div className="hidden lg:flex flex-col">
-            <span className="bg-green rounded-[7px] text-[30px] font-medium px-[7px] min-w-[221px]">
+            <span className="bg-green rounded-[7px] text-3xl font-medium px-[7px] min-w-[221px]">
               Search engine
             </span>
-            <span className="bg-green rounded-[7px] text-[30px] font-medium px-[7px] max-w-[197px]">
+            <span className="bg-green rounded-[7px] text-3xl font-medium px-[7px] max-w-[197px]">
               optimization
             </span>
           </div>

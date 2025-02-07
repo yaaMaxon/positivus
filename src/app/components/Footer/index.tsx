@@ -117,7 +117,7 @@ const Footer = () => {
               </span>
             )}
           </div>
-          <button className="bg-green text-[20px] rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
+          <button className="bg-green text-xl rounded-[14px] cursor-pointer px-[35px] py-[20px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1">
             Subscribe to news
           </button>
         </form>

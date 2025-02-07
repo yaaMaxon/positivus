@@ -27,7 +27,7 @@ const Preview = ({ title, subTitle, description, img }: Prop) => {
           </span>
         )}
         <h1
-          className={`text-[36px] lg:text-[43px] xl:text-[60px] leading-none font-medium ${
+          className={`text-4xl lg:text-[43px] xl:text-[60px] leading-none font-medium ${
             subTitle ? "lg:text-[40px]" : "lg:text-[60px]"
           }`}
         >

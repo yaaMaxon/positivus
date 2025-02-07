@@ -57,11 +57,11 @@ const QuestionBox = ({
             >
               <div className="flex items-center gap-[25px]">
                 {number && (
-                  <span className="text-[30px] lg:text-[60px] font-medium">
+                  <span className="text-3xl lg:text-[60px] font-medium">
                     {number}
                   </span>
                 )}
-                <span className="text-lg lg:text-[30px] font-medium">
+                <span className="text-lg lg:text-3xl font-medium">
                   {question}
                 </span>
               </div>

@@ -27,7 +27,7 @@ const SectionTab = ({
           {subTitles.map((subTitle) => (
             <span
               key={subTitle}
-              className={`bg-green text-[36px] px-[7px] rounded-[7px]`}
+              className={`bg-green text-4xl px-[7px] rounded-[7px]`}
             >
               {subTitle}
             </span>

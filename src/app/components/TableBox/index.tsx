@@ -37,11 +37,11 @@ const TableBox = ({ tableList }: Props) => {
             ${index === 5 ? "lg:pl-[64px] lg:pt-[60px]" : ""}
         `}
         >
-          <h3 className="text-[30px] leading-none font-medium">{title}</h3>
+          <h3 className="text-3xl leading-none font-medium">{title}</h3>
           <p className="lg:text-lg">{description}</p>
           <motion.button
             type="button"
-            className="flex items-center gap-[15px] text-[20px]"
+            className="flex items-center gap-[15px] text-xl"
             whileHover="wiggle"
           >
             <motion.div

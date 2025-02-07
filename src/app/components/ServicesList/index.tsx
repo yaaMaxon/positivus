@@ -36,14 +36,14 @@ const ServicesList = ({ servicesList }: Prop) => {
             <div className="lg:flex flex-col gap-[93px]">
               <div className="flex flex-col items-start mb-[27px] lg:mb-0">
                 <span
-                  className={`text-[26px] lg:text-[30px] px-[7px] rounded-[7px] ${
+                  className={`text-[26px] lg:text-3xl px-[7px] rounded-[7px] ${
                     bgTextColor ? bgTextColor : "bg-white"
                   }`}
                 >
                   {firstText}
                 </span>
                 <span
-                  className={`text-[26px] lg:text-[30px] px-[7px] rounded-[7px] ${
+                  className={`text-[26px] lg:text-3xl px-[7px] rounded-[7px] ${
                     bgTextColor ? bgTextColor : "bg-white"
                   }`}
                 >

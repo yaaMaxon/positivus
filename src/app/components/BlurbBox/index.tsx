@@ -27,9 +27,7 @@ const BlurbBox = ({
           furtherIcon && "gap-[25px]"
         }`}
       >
-        <span className="text-[26px] lg:text-[30px] font-medium">
-          {subTitle}
-        </span>
+        <span className="text-[26px] lg:text-3xl font-medium">{subTitle}</span>
         <p className={`lg:max-w-[500px] ${furtherIcon && "lg:max-w-[600px]"}`}>
           {description}
         </p>

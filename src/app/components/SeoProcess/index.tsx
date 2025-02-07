@@ -26,7 +26,7 @@ const SeoProcess = () => {
               </span>
             </div>
             <div className="flex flex-col gap-[15px] lg:gap-[30px]">
-              <h3 className="text-[26px] leading-none lg:text-[30px] font-medium">
+              <h3 className="text-[26px] leading-none lg:text-3xl font-medium">
                 {title}
               </h3>
               <p className="text-lg">{description}</p>

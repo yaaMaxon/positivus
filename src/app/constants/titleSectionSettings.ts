@@ -45,3 +45,14 @@ export const moreInsights = {
      subTitles: ["Explore More", "Insights"]
 }
 
+export const coreValues = {
+    title: 'Core Values',
+    description: "At the heart of everything we do are our core values:",
+}
+
+export const awardsRecognition = {
+    title: 'Awards & Recognition',
+    description: "At Positivus, our commitment to excellence has been recognized by industry leaders. Here are some of our proudest achievements:",
+    subTitles: ["Awards &", "Recognition"]
+}
+

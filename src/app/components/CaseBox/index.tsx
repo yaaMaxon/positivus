@@ -32,14 +32,14 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
             }`}
           >
             {extraSpan && (
-              <span className="text-[30px] text-white font-medium">
+              <span className="text-3xl text-white font-medium">
                 {extraSpan}
               </span>
             )}
             <p className="text-lg text-white">{text}</p>
             <motion.button
               type="button"
-              className="flex items-center gap-1 text-[20px] text-green cursor-pointer"
+              className="flex items-center gap-1 text-xl text-green cursor-pointer"
               whileHover="wiggle"
             >
               Learn more
@@ -73,14 +73,14 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
             <SwiperSlide key={index}>
               <div className="flex flex-col gap-5 bg-dark px-[50px] py-[42px] rounded-[45px]">
                 {extraSpan && (
-                  <span className="text-[30px] text-white font-medium">
+                  <span className="text-3xl text-white font-medium">
                     {extraSpan}
                   </span>
                 )}
                 <p className="text-white">{text}</p>
                 <motion.button
                   type="button"
-                  className="flex items-center gap-1 text-[20px] text-green cursor-pointer"
+                  className="flex items-center gap-1 text-xl text-green cursor-pointer"
                   whileHover="wiggle"
                 >
                   Learn more

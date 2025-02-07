@@ -32,7 +32,7 @@ const PricingPlans = () => {
           >
             <div className="flex items-center justify-between mb-5">
               <span
-                className={`text-[30px] font-semibold ${
+                className={`text-3xl font-semibold ${
                   plan === "Pro Plan" && "text-white"
                 }`}
               >
@@ -88,7 +88,7 @@ const PricingPlans = () => {
               </Button>
               <motion.button
                 type="button"
-                className={`text-[20px] border-[2px] border-[#191A23] rounded-[14px] px-[35px] py-5 bg-transparent transition-all duration-300 ${
+                className={`text-xl border-[2px] border-[#191A23] rounded-[14px] px-[35px] py-5 bg-transparent transition-all duration-300 ${
                   plan === "Pro Plan" && "text-white border-white"
                 }`}
                 whileHover={{

@@ -17,7 +17,7 @@ const UseCases = () => {
           img={blogIllustration}
         />
       </div>
-      <div>
+      <div className="mb-[60px] lg:mb-[140px]">
         <MainBlog />
       </div>
       <div className="mb-[60px] lg:mb-[140px]">

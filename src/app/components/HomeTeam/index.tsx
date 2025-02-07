@@ -59,9 +59,7 @@ const HomeTeam = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-lg lg:text-[20px] font-medium">
-                    {name}
-                  </span>
+                  <span className="text-lg lg:text-xl font-medium">{name}</span>
                   <span className="lg:text-lg">{position}</span>
                 </div>
                 <motion.div

@@ -17,7 +17,7 @@ const HomeMain = () => {
             alt="homeIllustration"
             className="lg:hidden mb-5"
           />
-          <p className="lg:text-[20px] mb-10 lg:mb-0 lg:max-w-[500px]">
+          <p className="lg:text-xl mb-10 lg:mb-0 lg:max-w-[500px]">
             Our digital marketing agency helps businesses grow and succeed
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.

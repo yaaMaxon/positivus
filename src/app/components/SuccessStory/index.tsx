@@ -28,7 +28,7 @@ const SuccessStory = () => {
         <span className="hidden lg:block bg-green rounded-[7px] text-[40px] font-medium px-[7px] ">
           Featured Success Story
         </span>
-        <span className="text-[26px] lg:text-[30px] text-white font-medium ">
+        <span className="text-[26px] lg:text-3xl text-white font-medium ">
           Scaling Success for a Leading E-Commerce Brand
         </span>
         <p className="text-white text-lg ">
@@ -48,7 +48,7 @@ const SuccessStory = () => {
         </ul>
         <motion.button
           type="button"
-          className="flex items-center gap-[15px] text-green text-[20px]"
+          className="flex items-center gap-[15px] text-green text-xl"
           whileHover="wiggle"
         >
           <motion.div
