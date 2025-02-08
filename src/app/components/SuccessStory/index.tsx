@@ -7,7 +7,7 @@ import { successStoryList } from "@/app/constants/SuccessStorySettings";
 
 const SuccessStory = () => {
   return (
-    <div className="flex items-baseline lg:items-start gap-[30px] lg:gap-[150px] bg-dark rounded-[45px] px-10 pt-10 pb-[50px] lg:p-[50px]">
+    <div className="flex items-baseline lg:items-start gap-[30px] lg:gap-[75px] xl:gap-[150px] bg-dark rounded-[45px] px-10 pt-10 pb-[50px] lg:p-[50px]">
       <motion.div
         animate={{
           rotate: [0, 360],
@@ -36,14 +36,27 @@ const SuccessStory = () => {
           e-commerce brand increase visibility, drive traffic, and boost sales.
         </p>
         <ul className="flex flex-col gap-[25px] lg:gap-[30px] lg:hidden">
-          {successStoryList.map(({ percentage, text }) => (
-            <li
+          {successStoryList.map(({ percentage, text }, index) => (
+            <motion.li
               key={percentage}
               className="flex flex-col items-center gap-2.5 p-[30px] lg:px-5 bg-white rounded-[25px]"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
+                transition: { duration: 0.7 },
+              }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <span className="text-[40px] font-medium">{percentage}%</span>
               <span className="text-lg text-center">{text}</span>
-            </li>
+            </motion.li>
           ))}
         </ul>
         <motion.button
@@ -68,15 +81,26 @@ const SuccessStory = () => {
           Read
         </motion.button>
       </div>
-      <ul className="hidden lg:grid lg:grid-cols-2 gap-[30px]">
-        {successStoryList.map(({ percentage, text }) => (
-          <li
+      <ul className="hidden lg:grid lg:grid-cols-2 lg:gap-5 xl:gap-[30px]">
+        {successStoryList.map(({ percentage, text }, index) => (
+          <motion.li
             key={percentage}
             className="flex flex-col items-center gap-2.5 p-[30px] lg:px-5 bg-white rounded-[25px]"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
+              transition: { duration: 0.7 },
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
-            <span className="text-[40px] font-medium">{percentage}%</span>
-            <span className="text-lg text-center">{text}</span>
-          </li>
+            <span className="lg:text-3xl xl:text-[40px] font-medium">
+              {percentage}%
+            </span>
+            <span className="xl:text-lg text-center">{text}</span>
+          </motion.li>
         ))}
       </ul>
     </div>

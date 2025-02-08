@@ -56,3 +56,14 @@ export const awardsRecognition = {
     subTitles: ["Awards &", "Recognition"]
 }
 
+export const impactInNumbers = {
+    title: 'Our Impact in Numbers',
+    description: "A snapshot of the milestones and achievements that drive our success",
+    subTitles: ["Our Impact", "in Numbers"]
+}
+
+export const ourJourney = {
+    title: 'Our Journey',
+    description: "From humble beginnings to industry leaders, discover how Positivus has evolved to drive success for businesses worldwide.",
+}
+

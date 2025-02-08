@@ -18,7 +18,7 @@ const PricingPlans = () => {
         </p>
       </div>
       <ul className="flex flex-col gap-[30px] lg:flex-row lg:gap-[40px]">
-        {pricingList.map(({ plan, price, advantages }) => (
+        {pricingList.map(({ plan, price, advantages }, index) => (
           <motion.li
             key={plan}
             whileHover={{
@@ -26,6 +26,10 @@ const PricingPlans = () => {
               boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
               transition: { duration: 0.7 },
             }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`px-[30px] pt-[30px] pb-[50px] border border-dark rounded-[30px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer ${
               plan === "Pro Plan" && "bg-dark"
             }`}

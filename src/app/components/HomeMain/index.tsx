@@ -9,7 +9,7 @@ const HomeMain = () => {
     <div className="flex flex-col">
       <div className="flex justify-between mb-[60px] lg:mb-[70px]">
         <div className="flex flex-col items-center lg:items-start lg:gap-[35px]">
-          <h1 className="text-[43px] font-medium lg:text-[60px] mb-2.5 lg:mb-0 lg:max-w-[530px]">
+          <h1 className="text-[43px] font-medium lg:text-6xl mb-2.5 lg:mb-0 lg:max-w-[530px]">
             Navigating the digital landscape for success
           </h1>
           <Image

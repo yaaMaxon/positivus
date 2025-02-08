@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useMediaQuery } from "@/app/hooks/useMediaQuery";
 
 type Props = {
@@ -44,18 +45,26 @@ const SectionTab = ({
   })();
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
       className={`flex flex-col lg:flex-row items-center gap-[30px] lg:gap-10 ${wrapperClassName}`}
     >
       {generatedTitleMarkup}
       {description && (
-        <p
+        <motion.p
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
           className={`lg:text-lg text-center lg:text-start ${descriptionClassName}`}
         >
           {description}
-        </p>
+        </motion.p>
       )}
-    </div>
+    </motion.div>
   );
 };
 

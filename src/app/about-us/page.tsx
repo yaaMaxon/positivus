@@ -1,4 +1,6 @@
 import Preview from "../components/Preview";
+import ImpactInNumbers from "../components/ImpactInNumbers";
+import OurJourney from "../components/OurJourney";
 import CoreValue from "../components/CoreValues";
 import AboutUsQuote from "../components/AboutUsQuote";
 import AwardsRecognition from "../components/AwardsRecognition";
@@ -6,7 +8,7 @@ import BlurbBox from "../components/BlurbBox";
 import aboutUsPreview from "@assets/img/aboutUsPreview.webp";
 import JoinOurTeam from "@assets/icons/joinOurTeam.svg";
 
-const UseCases = () => {
+const AboutUs = () => {
   return (
     <main className="px-5 lg:px-[100px]">
       <div className="mt-10 lg:mt-[80px] mb-[60px] lg:mb-[140px]">
@@ -15,6 +17,12 @@ const UseCases = () => {
           description="At Positivus, we help businesses grow by combining creativity, innovation, and data-driven strategies. Together, we build a future of shared success."
           img={aboutUsPreview}
         />
+      </div>
+      <div className="mb-[60px] lg:mb-[140px]">
+        <ImpactInNumbers />
+      </div>
+      <div className="mb-[60px] lg:mb-[140px]">
+        <OurJourney />
       </div>
       <div className="mb-[70px] lg:mb-[180px]">
         <CoreValue />
@@ -38,4 +46,4 @@ const UseCases = () => {
   );
 };
 
-export default UseCases;
+export default AboutUs;

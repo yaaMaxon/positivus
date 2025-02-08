@@ -12,16 +12,19 @@ const ServicesList = ({ servicesList }: Prop) => {
   return (
     <ul className="flex flex-col gap-[30px] lg:grid lg:grid-cols-2 mb-[70px] lg:mb-[120px]">
       {servicesList.map(
-        ({
-          src,
-          alt,
-          firstText,
-          secondText,
-          bgColor,
-          bgTextColor,
-          learnMore,
-          icon,
-        }) => (
+        (
+          {
+            src,
+            alt,
+            firstText,
+            secondText,
+            bgColor,
+            bgTextColor,
+            learnMore,
+            icon,
+          },
+          index
+        ) => (
           <motion.li
             key={alt}
             whileHover={{
@@ -29,6 +32,10 @@ const ServicesList = ({ servicesList }: Prop) => {
               boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
               transition: { duration: 0.7 },
             }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`lg:flex items-center justify-between p-[50px] border border-dark rounded-[45px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer ${
               bgColor ? bgColor : "bg-gray"
             }`}

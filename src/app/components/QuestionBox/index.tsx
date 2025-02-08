@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import PlusIcon from "@assets/icons/plus.svg";
 import MinusIcon from "@assets/icons/minus.svg";
 import SectionTab from "../SectionTab";
@@ -43,12 +43,21 @@ const QuestionBox = ({
       />
       <ul className="flex gap-5 flex-col lg:gap-[30px]">
         {questionsList.map(({ number, question, answer }, index) => (
-          <li
+          <motion.li
             key={index}
             onClick={() => handleIsAnswerVisible(index)}
             className={`bg-gray border border-dark rounded-[45px] p-[30px] lg:px-[60px] lg:py-[41px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer ${
               isAnswerVisible[index] && "bg-green"
             }`}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
+              transition: { duration: 0.7 },
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div
               className={`flex justify-between items-center ${
@@ -57,7 +66,7 @@ const QuestionBox = ({
             >
               <div className="flex items-center gap-[25px]">
                 {number && (
-                  <span className="text-3xl lg:text-[60px] font-medium">
+                  <span className="text-3xl lg:text-6xl font-medium">
                     {number}
                   </span>
                 )}
@@ -85,7 +94,7 @@ const QuestionBox = ({
                 {answer}
               </p>
             )}
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>
