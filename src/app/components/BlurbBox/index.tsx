@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Button from "../Button";
 
 type Props = {
@@ -18,7 +21,11 @@ const BlurbBox = ({
   className,
 }: Props) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
       className={`lg:relative lg:flex justify-between bg-gray p-[50px] lg:px-[60px] rounded-[45px] 
       } ${className && className}`}
     >
@@ -28,9 +35,15 @@ const BlurbBox = ({
         }`}
       >
         <span className="text-[26px] lg:text-3xl font-medium">{subTitle}</span>
-        <p className={`lg:max-w-[500px] ${furtherIcon && "lg:max-w-[600px]"}`}>
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className={`lg:max-w-[500px] ${furtherIcon && "lg:max-w-[600px]"}`}
+        >
           {description}
-        </p>
+        </motion.p>
         <Button className="bg-dark text-white">{textBtn}</Button>
       </div>
       {icon && (
@@ -39,7 +52,7 @@ const BlurbBox = ({
         </div>
       )}
       {furtherIcon && <div className="hidden lg:block">{furtherIcon}</div>}
-    </div>
+    </motion.div>
   );
 };
 

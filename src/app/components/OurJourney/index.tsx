@@ -41,13 +41,29 @@ const OurJourney = () => {
                     ${index === 1 && "self-end"}
                     ${index === 2 && "self-start"}`}
                 >
-                  <div className="flex items-center gap-[25px] ml-[32px] lg:ml-0">
+                  <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="flex items-center gap-[25px] ml-[32px] lg:ml-0"
+                  >
                     <StarIcon className="lg:hidden fill-green w-[35px] h-[35px]" />
                     <span className="text-[43px] lg:text-6xl font-medium">
                       {year}
                     </span>
-                  </div>
-                  <div className="flex items-baseline lg:items-start gap-5 p-10 bg-dark rounded-[45px] lg:max-w-[600px]">
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      ease: "easeOut",
+                      delay: index * 0.2,
+                    }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    className="flex items-baseline lg:items-start gap-5 p-10 bg-dark rounded-[45px] lg:max-w-[600px]"
+                  >
                     <div>
                       <motion.div
                         animate={{
@@ -68,7 +84,7 @@ const OurJourney = () => {
                       </span>
                       <p className="text-white lg:text-lg">{description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="hidden lg:block self-end">
                   {secondIcon && secondIcon}

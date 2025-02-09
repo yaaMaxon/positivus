@@ -23,8 +23,12 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
       />
       <ul className="hidden lg:flex gap-[64px] bg-dark py-[70px] px-[60px] rounded-[45px]">
         {listItems.map(({ extraSpan, text }, index) => (
-          <li
+          <motion.li
             key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className={`flex flex-col gap-5 ${
               index !== 0 && index !== listItems.length - 1
                 ? "border-x border-white px-[64px]"
@@ -58,7 +62,7 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
                 <LinkIcon className="text-green" />
               </motion.div>
             </motion.button>
-          </li>
+          </motion.li>
         ))}
       </ul>
 
@@ -73,14 +77,14 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
             <SwiperSlide key={index}>
               <div className="flex flex-col gap-5 bg-dark px-[50px] py-[42px] rounded-[45px]">
                 {extraSpan && (
-                  <span className="text-3xl text-white font-medium">
+                  <span className="text-xl xl:text-3xl text-white font-medium">
                     {extraSpan}
                   </span>
                 )}
                 <p className="text-white">{text}</p>
                 <motion.button
                   type="button"
-                  className="flex items-center gap-1 text-xl text-green cursor-pointer"
+                  className="flex items-center gap-1 text-sm lg:text-lg xl:text-xl text-green cursor-pointer"
                   whileHover="wiggle"
                 >
                   Learn more

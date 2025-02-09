@@ -31,10 +31,16 @@ const SuccessStory = () => {
         <span className="text-[26px] lg:text-3xl text-white font-medium ">
           Scaling Success for a Leading E-Commerce Brand
         </span>
-        <p className="text-white text-lg ">
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="text-white text-lg "
+        >
           Through a comprehensive SEO and PPC strategy, we helped this
           e-commerce brand increase visibility, drive traffic, and boost sales.
-        </p>
+        </motion.p>
         <ul className="flex flex-col gap-[25px] lg:gap-[30px] lg:hidden">
           {successStoryList.map(({ percentage, text }, index) => (
             <motion.li

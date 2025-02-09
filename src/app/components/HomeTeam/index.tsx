@@ -39,7 +39,7 @@ const HomeTeam = () => {
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-[30px] lg:gap-10 mb-[39px] lg:mb-0">
         {teamList
           .slice(0, isDesktop ? teamList.length : visibleCount)
-          .map(({ image, name, position, description }) => (
+          .map(({ image, name, position, description }, index) => (
             <motion.li
               key={name}
               className="border border-dark rounded-[45px] px-[35px] py-[40px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer"
@@ -48,6 +48,14 @@ const HomeTeam = () => {
                 boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
                 transition: { duration: 0.3 },
               }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <div className="relative flex items-end gap-5 mb-5 lg:mb-[28px]">
                 <div className="relative">
@@ -59,7 +67,9 @@ const HomeTeam = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-lg lg:text-xl font-medium">{name}</span>
+                  <span className="lg:text-lg xl:text-xl font-medium">
+                    {name}
+                  </span>
                   <span className="lg:text-lg">{position}</span>
                 </div>
                 <motion.div
@@ -72,7 +82,6 @@ const HomeTeam = () => {
                 >
                   <LinkeDin />
                 </motion.div>
-                {/* <LinkeDin className="absolute top-0 right-0" /> */}
               </div>
               <div className="pt-5 lg:pt-[28px] border-t border-t-black">
                 <p className="lg:text-lg lg:max-w-[317px]">{description}</p>

@@ -8,7 +8,13 @@ import { motion } from "framer-motion";
 const PricingPlans = () => {
   return (
     <div>
-      <div className="flex flex-col items-start gap-[35px] lg:gap-[15px] mb-[60px] lg:mb-[100px]">
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-col items-start gap-[35px] lg:gap-[15px] mb-[60px] lg:mb-[100px]"
+      >
         <h2 className="text-[40px] leading-normal lg:text[90px] font-medium">
           Pricing
         </h2>
@@ -16,7 +22,7 @@ const PricingPlans = () => {
           Elevate Your Online Presence: Competitive Pricing for Exceptional
           Results
         </p>
-      </div>
+      </motion.div>
       <ul className="flex flex-col gap-[30px] lg:flex-row lg:gap-[40px]">
         {pricingList.map(({ plan, price, advantages }, index) => (
           <motion.li

@@ -31,7 +31,13 @@ const SearchEngine = () => {
           Back
         </motion.button>
       </div>
-      <div className="flex items-baseline gap-5 lg:gap-[45px] bg-dark rounded-[45px] px-10 pt-10 pb-[50px] lg:py-[60px] lg:pr-[100px] lg:pl-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex items-baseline gap-5 lg:gap-[45px] bg-dark rounded-[45px] px-10 pt-10 pb-[50px] lg:py-[60px] lg:pr-[100px] lg:pl-10"
+      >
         <motion.div
           animate={{
             rotate: [0, 360],
@@ -60,16 +66,22 @@ const SearchEngine = () => {
             </span>
           </div>
           <div className="flex flex-col gap-5 lg:gap-[50px]">
-            <p className="text-white text-lg">
+            <motion.p
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="text-white text-lg"
+            >
               SEO is the process of improving your website’s visibility on
               search engines like Google. By optimizing your content and site
               structure, we help your business rank higher in search results,
               driving more organic traffic and potential customers.
-            </p>
-            <Button className="bg-white">Boost My Rankings</Button>
+            </motion.p>
+            <Button className="bg-white text-xl">Boost My Rankings</Button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

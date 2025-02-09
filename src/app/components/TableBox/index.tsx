@@ -17,8 +17,12 @@ const TableBox = ({ tableList }: Props) => {
   return (
     <ul className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-0 lg:shadow-[0px_5px_0px_0px_#191A23] lg:border lg:border-dark lg:rounded-[45px] lg:px-[60px] lg:py-20">
       {tableList.map(({ title, description, link }, index) => (
-        <li
+        <motion.li
           key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className={`flex flex-col gap-5 border border-dark rounded-[45px] lg:rounded-none px-[50px] py-[42px] shadow-[0px_5px_0px_0px_#191A23] lg:shadow-none
 
             lg:border-0 lg:p-0
@@ -60,7 +64,7 @@ const TableBox = ({ tableList }: Props) => {
             </motion.div>
             {link}
           </motion.button>
-        </li>
+        </motion.li>
       ))}
     </ul>
   );

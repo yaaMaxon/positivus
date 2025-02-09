@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, SubmitHandler } from "react-hook-form";
+import { motion } from "framer-motion";
 import IllustrationContactUs from "@assets/icons/illustrationContactUs.svg";
 import SectionTab from "../SectionTab";
 import { homeContactUs } from "@/app/constants/titleSectionSettings";
@@ -36,7 +37,12 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <SectionTab
         title={homeContactUs.title}
         description={homeContactUs.description}
@@ -158,7 +164,7 @@ const ContactUsForm = () => {
           </button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

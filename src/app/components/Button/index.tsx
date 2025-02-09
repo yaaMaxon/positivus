@@ -9,7 +9,7 @@ const Button = ({ children, className, onClick }: Props) => {
     <button
       type="button"
       onClick={onClick}
-      className={`text-xl px-[35px] py-5 rounded-[14px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1 ${className}`}
+      className={`text-lg lg:text-xl px-2.5 lg:px-[35px] py-5 rounded-[14px] transition-all duration-300 hover:-translate-y-1 active:translate-y-1 ${className}`}
     >
       {children}
     </button>

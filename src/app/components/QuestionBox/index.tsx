@@ -46,9 +46,9 @@ const QuestionBox = ({
           <motion.li
             key={index}
             onClick={() => handleIsAnswerVisible(index)}
-            className={`bg-gray border border-dark rounded-[45px] p-[30px] lg:px-[60px] lg:py-[41px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer ${
-              isAnswerVisible[index] && "bg-green"
-            }`}
+            className={` border border-dark rounded-[45px] p-[30px] lg:px-[60px] lg:py-[41px] shadow-[0px_5px_0px_0px_#191A23] cursor-pointer ${
+              isAnswerVisible[index] ? "bg-green" : "bg-gray"
+            } transition-colors duration-500 ease-in-out`}
             whileHover={{
               scale: 1.05,
               boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
@@ -79,7 +79,7 @@ const QuestionBox = ({
                   key={isAnswerVisible[index] ? "minus" : "plus"}
                   initial={{ scale: 0.8, rotate: 0 }}
                   animate={{ scale: 1, rotate: 180 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1 }}
                 >
                   {isAnswerVisible[index] ? (
                     <MinusIcon className="w-[30px] h-[30px] lg:w-[58px] lg:h-[58px]" />
@@ -90,9 +90,15 @@ const QuestionBox = ({
               </button>
             </div>
             {isAnswerVisible[index] && (
-              <p className="text-lg pt-[30px] border-t border-t-black">
+              <motion.p
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+                className="text-lg pt-[30px] border-t border-t-black"
+              >
                 {answer}
-              </p>
+              </motion.p>
             )}
           </motion.li>
         ))}

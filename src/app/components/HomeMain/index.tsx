@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import homeIllustration from "@assets/img/homeIllustration.webp";
 import homeIllustrationDesk from "@assets/img/homeIllustrationDesk.webp";
@@ -9,19 +12,31 @@ const HomeMain = () => {
     <div className="flex flex-col">
       <div className="flex justify-between mb-[60px] lg:mb-[70px]">
         <div className="flex flex-col items-center lg:items-start lg:gap-[35px]">
-          <h1 className="text-[43px] font-medium lg:text-6xl mb-2.5 lg:mb-0 lg:max-w-[530px]">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-[43px] font-medium lg:text-6xl mb-2.5 lg:mb-0 lg:max-w-[530px]"
+          >
             Navigating the digital landscape for success
-          </h1>
+          </motion.h1>
           <Image
             src={homeIllustration}
             alt="homeIllustration"
             className="lg:hidden mb-5"
           />
-          <p className="lg:text-xl mb-10 lg:mb-0 lg:max-w-[500px]">
+          <motion.p
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="lg:text-xl mb-10 lg:mb-0 lg:max-w-[500px]"
+          >
             Our digital marketing agency helps businesses grow and succeed
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.
-          </p>
+          </motion.p>
           <Button className="bg-dark text-white">Book a consultation</Button>
         </div>
         <Image

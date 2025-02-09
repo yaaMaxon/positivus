@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -48,7 +49,13 @@ const Testimonials = () => {
         wrapperClassName="mb-10 lg:mb-[85px]"
         descriptionClassName="lg:max-w-[473px]"
       />
-      <div className="flex flex-col gap-[60px] lg:gap-[124px] bg-dark px-[30px] lg:px-0 pt-[30px] lg:pt-[84px] pb-[60px] lg:pb-[68px] rounded-[45px]">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-col gap-[60px] lg:gap-[124px] bg-dark px-[30px] lg:px-0 pt-[30px] lg:pt-[84px] pb-[60px] lg:pb-[68px] rounded-[45px]"
+      >
         {testimonialsList.length > 0 ? (
           <Swiper
             className="w-full h-auto min-h-[200px]"
@@ -129,7 +136,7 @@ const Testimonials = () => {
             <ArrowRightIcon />
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
