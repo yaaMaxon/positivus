@@ -1,11 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import StarIcon from "@assets/icons/star.svg";
 import LinkIcon from "@assets/icons/linkIcon.svg";
 import { successStoryList } from "@/app/constants/SuccessStorySettings";
 
 const SuccessStory = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/about-us#core-values");
+  };
+
   return (
     <div className="flex items-baseline lg:items-start gap-[30px] lg:gap-[75px] xl:gap-[150px] bg-dark rounded-[45px] px-10 pt-10 pb-[50px] lg:p-[50px]">
       <motion.div
@@ -69,6 +75,7 @@ const SuccessStory = () => {
           type="button"
           className="flex items-center gap-[15px] text-green text-xl"
           whileHover="wiggle"
+          onClick={handleButtonClick}
         >
           <motion.div
             variants={{

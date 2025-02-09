@@ -1,11 +1,16 @@
 "use client";
 
 import Button from "../Button";
+import { useRouter } from "next/navigation";
 import CheckIcon from "@assets/icons/check.svg";
 import { pricingList } from "@/app/constants/PricingSettings";
 import { motion } from "framer-motion";
 
 const PricingPlans = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/#contact-us");
+  };
   return (
     <div>
       <motion.div
@@ -98,7 +103,8 @@ const PricingPlans = () => {
               </Button>
               <motion.button
                 type="button"
-                className={`text-xl border-[2px] border-[#191A23] rounded-[14px] px-[35px] py-5 bg-transparent transition-all duration-300 ${
+                onClick={handleButtonClick}
+                className={`text-xl border-[2px] border-[#191A23] rounded-[14px] px-5 xl:px-[35px] py-5 bg-transparent transition-all duration-300 ${
                   plan === "Pro Plan" && "text-white border-white"
                 }`}
                 whileHover={{

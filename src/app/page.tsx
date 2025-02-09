@@ -14,7 +14,10 @@ const Home = () => {
       <div className="mt-[40px] lg:mt-[70px]">
         <HomeMain />
       </div>
-      <div className="mt-[60px] lg:mt-[140px] mb-[60px] lg:mb-[160px]">
+      <div
+        id="home-services"
+        className="mt-[60px] lg:mt-[140px] mb-[60px] lg:mb-[160px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <HomeServices />
       </div>
       <div className="mb-[60px] lg:mb-[140px]">
@@ -33,13 +36,22 @@ const Home = () => {
           questionsList={workingQuestions}
         />
       </div>
-      <div className="mb-[60px] lg:mb-[90px]">
+      <div
+        id="team"
+        className="mb-[60px] lg:mb-[90px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <HomeTeam />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="testimonials"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <Testimonials />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="contact-us"
+        className="mb-[60px] lg:mb-[140px scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <ContactUsForm />
       </div>
     </main>

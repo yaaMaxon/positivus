@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import homeIllustration from "@assets/img/homeIllustration.webp";
 import homeIllustrationDesk from "@assets/img/homeIllustrationDesk.webp";
@@ -8,6 +9,11 @@ import Button from "../Button";
 import SocialPlatforms from "../SocialPlatforms";
 
 const HomeMain = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/#contact-us");
+  };
+
   return (
     <div className="flex flex-col">
       <div className="flex justify-between mb-[60px] lg:mb-[70px]">
@@ -37,7 +43,9 @@ const HomeMain = () => {
             online through a range of services including SEO, PPC, social media
             marketing, and content creation.
           </motion.p>
-          <Button className="bg-dark text-white">Book a consultation</Button>
+          <Button className="bg-dark text-white" onClick={handleButtonClick}>
+            Book a consultation
+          </Button>
         </div>
         <Image
           src={homeIllustrationDesk}

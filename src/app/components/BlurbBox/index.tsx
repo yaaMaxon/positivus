@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Button from "../Button";
 
 type Props = {
@@ -10,6 +11,7 @@ type Props = {
   icon?: React.ReactNode;
   furtherIcon?: React.ReactNode;
   className?: string;
+  path: string;
 };
 
 const BlurbBox = ({
@@ -19,7 +21,12 @@ const BlurbBox = ({
   icon,
   textBtn,
   className,
+  path,
 }: Props) => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push(`${path}`);
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -44,7 +51,9 @@ const BlurbBox = ({
         >
           {description}
         </motion.p>
-        <Button className="bg-dark text-white">{textBtn}</Button>
+        <Button className="bg-dark text-white" onClick={handleButtonClick}>
+          {textBtn}
+        </Button>
       </div>
       {icon && (
         <div className="lg:absolute bottom-[-24px] right-0 hidden lg:block">

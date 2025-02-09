@@ -16,6 +16,7 @@ export const servicesList = [
     bgTextColor: "bg-green",
     learnMore: "text-black",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/services#search-engine",
   },
   {
     src: payPerClickImg,
@@ -26,6 +27,7 @@ export const servicesList = [
     bgTextColor: "bg-white",
     learnMore: "text-black",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/pricing",
   },
   {
     src: socialMediaImg,
@@ -36,6 +38,7 @@ export const servicesList = [
     bgTextColor: "bg-white",
     learnMore: "text-white",
     icon: <LinkIcon className="fill-white text-dark" />,
+    path: "/about-us#awards",
   },
   {
     src: emailImg,
@@ -46,6 +49,7 @@ export const servicesList = [
     bgTextColor: "bg-green",
     learnMore: "text-black",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/#testimonials",
   },
   {
     src: contentImg,
@@ -56,6 +60,7 @@ export const servicesList = [
     bgTextColor: "bg-white",
     learnMore: "text-black",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/blog",
   },
   {
     src: analyticsImg,
@@ -66,5 +71,6 @@ export const servicesList = [
     bgTextColor: "bg-green",
     learnMore: "text-white",
     icon: <LinkIcon className="fill-white text-dark" />,
+    path: "/services#seo-process",
   },
 ];

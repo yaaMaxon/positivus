@@ -22,7 +22,10 @@ const UseCases = () => {
       <div className="mb-[60px] lg:mb-[140px]">
         <SuccessStory />
       </div>
-      <div className="mb-[50px] lg:mb-[140px]">
+      <div
+        id="all-stories"
+        className="mb-[50px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <SectionTab
           title={allStories.title}
           description={allStories.description}
@@ -41,6 +44,7 @@ const UseCases = () => {
           textBtn="Get your proposal"
           icon={<FreeProposeUseCase />}
           className="bg-green shadow-[0px_5px_0px_0px_#191A23] lg:shadow-none"
+          path="/pricing"
         />
       </div>
     </main>

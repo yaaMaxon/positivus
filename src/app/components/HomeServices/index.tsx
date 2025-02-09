@@ -21,6 +21,7 @@ const HomeServices = () => {
             services can help your business grow and succeed online."
         textBtn="Get your proposal"
         icon={<FreePropose />}
+        path="/pricing"
       />
     </div>
   );

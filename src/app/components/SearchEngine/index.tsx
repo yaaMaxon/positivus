@@ -1,11 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import LinkIcon from "@assets/icons/LinkIcon.svg";
+import { useRouter } from "next/navigation";
+import LinkIcon from "@assets/icons/linkIcon.svg";
 import StarIcon from "@assets/icons/star.svg";
 import Button from "../Button";
 
 const SearchEngine = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/#contact-us");
+  };
+
+  const handleBackClick = () => {
+    router.push("/#home-services");
+  };
+
   return (
     <div>
       <div className="mb-[50px] lg:mb-[40px]">
@@ -13,6 +23,7 @@ const SearchEngine = () => {
           type="button"
           className="flex items-center gap-[15px] text-xl"
           whileHover="wiggle"
+          onClick={handleBackClick}
         >
           <motion.div
             variants={{
@@ -78,7 +89,9 @@ const SearchEngine = () => {
               structure, we help your business rank higher in search results,
               driving more organic traffic and potential customers.
             </motion.p>
-            <Button className="bg-white text-xl">Boost My Rankings</Button>
+            <Button className="bg-white text-xl" onClick={handleButtonClick}>
+              Boost My Rankings
+            </Button>
           </div>
         </div>
       </motion.div>

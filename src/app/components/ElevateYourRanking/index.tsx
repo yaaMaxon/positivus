@@ -1,11 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Button from "../Button";
 import elevateRanking from "@assets/img/elevateRanking.webp";
 
 const ElevateYourRanking = () => {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/#contact-us");
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -39,7 +45,9 @@ const ElevateYourRanking = () => {
           src={elevateRanking}
           alt="searching picture"
         />
-        <Button className="bg-green">Start My SEO Journey</Button>
+        <Button className="bg-green" onClick={handleButtonClick}>
+          Start My SEO Journey
+        </Button>
       </div>
       <Image
         className="max-w-[455px] h-auto hidden lg:block w-[40%]"

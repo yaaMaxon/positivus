@@ -24,13 +24,19 @@ const AboutUs = () => {
       <div className="mb-[60px] lg:mb-[140px]">
         <OurJourney />
       </div>
-      <div className="mb-[70px] lg:mb-[180px]">
+      <div
+        id="core-values"
+        className="mb-[70px] lg:mb-[180px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <CoreValue />
       </div>
       <div className="mb-[50px] lg:mb-[140px]">
         <AboutUsQuote />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="awards"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <AwardsRecognition />
       </div>
       <div className="mb-[60px] lg:mb-[140px]">
@@ -40,6 +46,7 @@ const AboutUs = () => {
           textBtn="Explore Careers"
           furtherIcon={<JoinOurTeam />}
           className="bg-green shadow-[0px_5px_0px_0px_#191A23]"
+          path="/#team"
         />
       </div>
     </main>

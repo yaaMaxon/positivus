@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import LinkIcon from "@assets/icons/linkIcon.svg";
 
 interface TableItems {
   title: string;
   description: string;
   link: string;
+  path: string;
 }
 
 type Props = {
@@ -16,7 +18,7 @@ type Props = {
 const TableBox = ({ tableList }: Props) => {
   return (
     <ul className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-0 lg:shadow-[0px_5px_0px_0px_#191A23] lg:border lg:border-dark lg:rounded-[45px] lg:px-[60px] lg:py-20">
-      {tableList.map(({ title, description, link }, index) => (
+      {tableList.map(({ title, description, link, path }, index) => (
         <motion.li
           key={index}
           initial={{ opacity: 0, y: 50 }}
@@ -43,27 +45,29 @@ const TableBox = ({ tableList }: Props) => {
         >
           <h3 className="text-3xl leading-none font-medium">{title}</h3>
           <p className="lg:text-lg">{description}</p>
-          <motion.button
-            type="button"
-            className="flex items-center gap-[15px] text-xl"
-            whileHover="wiggle"
-          >
-            <motion.div
-              variants={{
-                wiggle: {
-                  rotate: [0, -5, 5, -5, 5, 0],
-                  transition: {
-                    duration: 0.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  },
-                },
-              }}
+          <Link href={path}>
+            <motion.button
+              type="button"
+              className="flex items-center gap-[15px] text-xl"
+              whileHover="wiggle"
             >
-              <LinkIcon className="fill-green text-dark" />
-            </motion.div>
-            {link}
-          </motion.button>
+              <motion.div
+                variants={{
+                  wiggle: {
+                    rotate: [0, -5, 5, -5, 5, 0],
+                    transition: {
+                      duration: 0.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  },
+                }}
+              >
+                <LinkIcon className="fill-green text-dark" />
+              </motion.div>
+              {link}
+            </motion.button>
+          </Link>
         </motion.li>
       ))}
     </ul>

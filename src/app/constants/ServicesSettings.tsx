@@ -13,6 +13,7 @@ export const servicesList = [
     firstText: "Analytics and",
     secondText: "Tracking",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/services#seo-process",
   },
   {
     src: payPerClickImg,
@@ -20,6 +21,7 @@ export const servicesList = [
     firstText: "Pay-per-click",
     secondText: "advertising",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/pricing",
   },
   {
     src: socialMediaImg,
@@ -27,6 +29,7 @@ export const servicesList = [
     firstText: "Social Media",
     secondText: "Marketing",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/about-us#awards",
   },
   {
     src: emailImg,
@@ -34,6 +37,7 @@ export const servicesList = [
     firstText: "Email",
     secondText: "Marketing",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/#testimonials",
   },
   {
     src: contentImg,
@@ -41,6 +45,7 @@ export const servicesList = [
     firstText: "Content",
     secondText: "Creation",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/blog",
   },
   {
     src: searchImg,
@@ -48,5 +53,6 @@ export const servicesList = [
     firstText: "Search engine",
     secondText: "optimization",
     icon: <LinkIcon className="fill-dark text-green" />,
+    path: "/services#search-engine",
   },
 ];

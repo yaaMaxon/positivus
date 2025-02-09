@@ -20,7 +20,10 @@ const UseCases = () => {
       <div className="mb-[60px] lg:mb-[140px]">
         <MainBlog />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="more-insights"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <SectionTab
           title={moreInsights.title}
           description={moreInsights.description}

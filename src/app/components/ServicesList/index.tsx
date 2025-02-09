@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ServicesItems } from "@/app/types/services";
+import Link from "next/link";
 
 type Prop = {
   servicesList: ServicesItems[];
@@ -22,6 +23,7 @@ const ServicesList = ({ servicesList }: Prop) => {
             bgTextColor,
             learnMore,
             icon,
+            path,
           },
           index
         ) => (
@@ -58,19 +60,21 @@ const ServicesList = ({ servicesList }: Prop) => {
                 </span>
               </div>
               <div className="flex justify-between items-end">
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="flex items-center gap-[15px]"
-                >
-                  {icon}
-                  <span
-                    className={`text-5 hidden lg:block ${
-                      learnMore ? learnMore : "text-black"
-                    }`}
+                <Link href={`${path}`}>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="flex items-center gap-[15px]"
                   >
-                    Learn more
-                  </span>
-                </motion.div>
+                    {icon}
+                    <span
+                      className={`text-5 hidden lg:block ${
+                        learnMore ? learnMore : "text-black"
+                      }`}
+                    >
+                      Learn more
+                    </span>
+                  </motion.div>
+                </Link>
                 <Image src={src} alt={alt} className="lg:hidden" />
               </div>
             </div>

@@ -9,4 +9,5 @@ export interface ServicesItems {
   bgTextColor?: string;
   learnMore?: string;
   icon: React.ReactNode;
+  path: string;
 }

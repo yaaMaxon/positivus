@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -15,6 +16,10 @@ const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setMobileMenuState] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push("/#contact-us");
+  };
 
   const handleMenuToggle = () => {
     setMobileMenuState((prev) => !prev);
@@ -106,6 +111,7 @@ const NavBar = () => {
             <motion.button
               type="button"
               className="lg:text-lg xl:text-xl border border-[#191A23] rounded-[14px] lg:px-5 lg:py-2 xl:px-[35px] xl:py-5 bg-transparent transition-all duration-300"
+              onClick={handleButtonClick}
               whileHover={{
                 backgroundColor: "#B9FF66",
                 y: -5,

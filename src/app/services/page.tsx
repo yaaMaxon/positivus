@@ -17,13 +17,22 @@ const Services = () => {
           img={servicePreview}
         />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="search-engine"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <SearchEngine />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="seo-process"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <SeoProcess />
       </div>
-      <div className="mb-[60px] lg:mb-[140px]">
+      <div
+        id="use-cases"
+        className="mb-[60px] lg:mb-[140px] scroll-mt-[78px] lg:scroll-mt-[100px] xl:scroll-mt-[125px]"
+      >
         <CaseBox
           spanText="Use Cases"
           paragraphText="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"

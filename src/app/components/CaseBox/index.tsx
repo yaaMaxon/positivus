@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import LinkIcon from "@assets/icons/linkIcon.svg";
@@ -9,7 +10,7 @@ import SectionTab from "@components/SectionTab";
 type Props = {
   spanText: string;
   paragraphText: string;
-  listItems: { text: string; extraSpan?: string }[];
+  listItems: { text: string; extraSpan?: string; path: string }[];
 };
 
 const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
@@ -22,7 +23,7 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
         descriptionClassName="lg:max-w-[580px]"
       />
       <ul className="hidden lg:flex gap-[64px] bg-dark py-[70px] px-[60px] rounded-[45px]">
-        {listItems.map(({ extraSpan, text }, index) => (
+        {listItems.map(({ extraSpan, text, path }, index) => (
           <motion.li
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -41,27 +42,29 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
               </span>
             )}
             <p className="text-lg text-white">{text}</p>
-            <motion.button
-              type="button"
-              className="flex items-center gap-1 text-xl text-green cursor-pointer"
-              whileHover="wiggle"
-            >
-              Learn more
-              <motion.div
-                variants={{
-                  wiggle: {
-                    rotate: [0, -5, 5, -5, 5, 0],
-                    transition: {
-                      duration: 0.5,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    },
-                  },
-                }}
+            <Link href={path}>
+              <motion.button
+                type="button"
+                className="flex items-center gap-1 text-xl text-green cursor-pointer"
+                whileHover="wiggle"
               >
-                <LinkIcon className="text-green" />
-              </motion.div>
-            </motion.button>
+                Learn more
+                <motion.div
+                  variants={{
+                    wiggle: {
+                      rotate: [0, -5, 5, -5, 5, 0],
+                      transition: {
+                        duration: 0.5,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
+                >
+                  <LinkIcon className="text-green" />
+                </motion.div>
+              </motion.button>
+            </Link>
           </motion.li>
         ))}
       </ul>
@@ -73,7 +76,7 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
           centeredSlides={false}
           grabCursor
         >
-          {listItems.map(({ extraSpan, text }, index) => (
+          {listItems.map(({ extraSpan, text, path }, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col gap-5 bg-dark px-[50px] py-[42px] rounded-[45px]">
                 {extraSpan && (
@@ -82,27 +85,29 @@ const CaseBox = ({ spanText, paragraphText, listItems }: Props) => {
                   </span>
                 )}
                 <p className="text-white">{text}</p>
-                <motion.button
-                  type="button"
-                  className="flex items-center gap-1 text-sm lg:text-lg xl:text-xl text-green cursor-pointer"
-                  whileHover="wiggle"
-                >
-                  Learn more
-                  <motion.div
-                    variants={{
-                      wiggle: {
-                        rotate: [0, -5, 5, -5, 5, 0],
-                        transition: {
-                          duration: 0.5,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        },
-                      },
-                    }}
+                <Link href={path}>
+                  <motion.button
+                    type="button"
+                    className="flex items-center gap-1 text-sm lg:text-lg xl:text-xl text-green cursor-pointer"
+                    whileHover="wiggle"
                   >
-                    <LinkIcon className="text-green" />
-                  </motion.div>
-                </motion.button>
+                    Learn more
+                    <motion.div
+                      variants={{
+                        wiggle: {
+                          rotate: [0, -5, 5, -5, 5, 0],
+                          transition: {
+                            duration: 0.5,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          },
+                        },
+                      }}
+                    >
+                      <LinkIcon className="text-green" />
+                    </motion.div>
+                  </motion.button>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
