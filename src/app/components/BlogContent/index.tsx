@@ -42,7 +42,7 @@ const BlogContent = () => {
           By the Numbers: Facts About PPC and Organic Marketing
         </motion.h2>
       </div>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mb-10 lg:mb-[70px]">
+      <ul className="grid grid-cols-1 lg:grid-cols-2 mb-10 lg:mb-[70px]">
         <li className="flex flex-col gap-[15px] border border-dark shadow-[0px_5px_0px_0px_#191A23] px-[30px] py-10 rounded-[25px]">
           <span className="text-lg">Businesses earn an average of</span>
           <span className="text-3xl font-medium">$2 for every $1 spent</span>
