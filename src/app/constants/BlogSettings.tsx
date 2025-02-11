@@ -34,7 +34,7 @@ export const realWorldExamples = [
   {
     title: "Real-World Examples",
     paragraphs: [
-      "PPC and organic marketing have proven effective in different scenarios, and real-world examples highlight their impact. A local restaurant, for instance, leveraged Google Ads to target the search term “best Italian food near me,” which led to a remarkable 120% increase in reservations within just two weeks. Similarly, a B2B SaaS company focused on organic marketing by investing in SEO and blog content. This strategic approach helped them rank for competitive keywords and boosted their website traffic by 200% over six months. Some businesses find success by combining both strategies, like an e-commerce retailer that launched a targeted PPC campaign for seasonal sales while simultaneously optimizing product pages for organic search. This hybrid approach resulted in a 30% higher return on investment compared to relying solely on PPC advertising."
+      "PPC and organic marketing have proven effective in different scenarios, and real-world examples highlight their impact. A local restaurant, for instance, leveraged Google Ads to target the search term “best Italian food near me,” which led to a remarkable 120% increase in reservations within just two weeks. Similarly, a B2B SaaS company focused on organic marketing by investing in SEO and blog content. This strategic approach helped them rank for competitive keywords and boosted their website traffic by 200% over six months. Some businesses find success by combining both strategies, like an e-commerce retailer that launched a targeted PPC campaign for seasonal sales while simultaneously optimizing product pages for organic search. This hybrid approach resulted in a 30% higher return on investment compared to relying solely on PPC advertising.",
     ],
   },
 ];
@@ -44,8 +44,7 @@ export const choosingTheBestStrategy = [
     title: "Choosing the Best Strategy for Your Business",
     paragraphs: [
       "Ultimately, the choice between PPC and organic marketing depends on your specific needs. If you’re working with a tight deadline or launching a new service, PPC can deliver immediate results. On the other hand, if you’re focused on building a loyal audience and maintaining a steady flow of leads, organic marketing is your best bet.",
-      "By understanding the strengths and limitations of both strategies, you can create a marketing plan that aligns with your goals, budget, and target audience. Ready to take your next step? Start building a strategy that drives results today."
-
+      "By understanding the strengths and limitations of both strategies, you can create a marketing plan that aligns with your goals, budget, and target audience. Ready to take your next step? Start building a strategy that drives results today.",
     ],
   },
 ];
@@ -58,5 +57,64 @@ export const keyTakeaways = [
       "Organic marketing is better for long-term growth, building trust, and creating lasting customer relationships.",
       "A hybrid approach offers the best of both worlds, balancing quick wins with sustainable development.",
     ],
+  },
+];
+
+export const listItems = [
+  {
+    classes:
+      "flex w-full lg:w-[34%] flex-col gap-[15px] border border-dark shadow-[0px_5px_0px_0px_#191A23] px-[30px] py-10 rounded-[25px]",
+    content: (
+      <>
+        <span className="text-lg">Businesses earn an average of</span>
+        <span className="text-3xl font-medium">$2 for every $1 spent</span>
+        <span className="text-lg">on PPC advertising.</span>
+      </>
+    ),
+  },
+  {
+    classes:
+      "flex w-full lg:w-[61%] flex-col gap-[15px] bg-green px-[30px] py-10 rounded-[25px]",
+    content: (
+      <>
+        <span className="text-3xl font-medium">41% of clicks</span>
+        <p className="text-lg">
+          on search engines go to the top three organic results, showing the
+          importance of ranking highly.
+        </p>
+      </>
+    ),
+  },
+  {
+    classes:
+      "flex w-full lg:w-[55%] flex-col gap-[15px] bg-gray px-[30px] py-10 rounded-[25px]",
+    content: (
+      <>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[15px] lg:gap-[25px]">
+          <span className="text-lg">Content marketing costs</span>
+          <span className="text-3xl font-medium">62% less than paid ads</span>
+        </div>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[15px] lg:gap-[25px]">
+          <span className="text-lg">but generates</span>
+          <span className="text-3xl font-medium">3x as many leads</span>
+        </div>
+      </>
+    ),
+  },
+  {
+    classes:
+      "flex w-full lg:w-[40%] flex-col gap-[15px] bg-dark px-[30px] py-10 rounded-[25px]",
+    content: (
+      <>
+        <span className="text-lg text-white">Organic search drives</span>
+        <span className="text-3xl font-medium text-white">
+          <span className="text-3xl font-medium text-green">53%</span> of all
+          website traffic,
+        </span>
+        <span className="text-lg text-white">
+          making it the largest single source of traffic.
+        </span>
+      </>
+    ),
   },
 ];

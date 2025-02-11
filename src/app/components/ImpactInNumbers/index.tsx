@@ -30,7 +30,7 @@ const ImpactInNumbers = () => {
             }`}
           >
             <div
-              className={`h-10 min-w-[140px] md:min-w-[205px] xl:min-w-[250px] border-t border-l border-r border-dark rounded-t-[20px]
+              className={`h-10 w-full border-t border-l border-r border-dark rounded-t-[20px]
           ${index === 0 ? "lg:border-l-0 lg:rounded-tl-none" : ""}
           ${
             index === impactInNumbersList.length - 1

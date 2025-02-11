@@ -9,6 +9,7 @@ import { strikingTheRightBalance } from "@/app/constants/BlogSettings";
 import { realWorldExamples } from "@/app/constants/BlogSettings";
 import { choosingTheBestStrategy } from "@/app/constants/BlogSettings";
 import { keyTakeaways } from "@/app/constants/BlogSettings";
+import { listItems } from "@/app/constants/BlogSettings";
 
 const BlogContent = () => {
   return (
@@ -42,39 +43,24 @@ const BlogContent = () => {
           By the Numbers: Facts About PPC and Organic Marketing
         </motion.h2>
       </div>
-      <ul className="grid grid-cols-1 lg:grid-cols-2 mb-10 lg:mb-[70px]">
-        <li className="flex flex-col gap-[15px] border border-dark shadow-[0px_5px_0px_0px_#191A23] px-[30px] py-10 rounded-[25px]">
-          <span className="text-lg">Businesses earn an average of</span>
-          <span className="text-3xl font-medium">$2 for every $1 spent</span>
-          <span className="text-lg">on PPC advertising.</span>
-        </li>
-        <li className="flex flex-col gap-[15px] bg-green px-[30px] py-10 rounded-[25px]">
-          <span className="text-3xl font-medium">41% of clicks</span>
-          <p className="text-lg">
-            on search engines go to the top three organic results, showing the
-            importance of ranking highly.
-          </p>
-        </li>
-        <li className="flex flex-col gap-[15px] bg-gray px-[30px] py-10 rounded-[25px]">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[15px] lg:gap-[25px]">
-            <span className="text-lg">Content marketing costs</span>
-            <span className="text-3xl font-medium">62% less than paid ads</span>
-          </div>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-[15px] lg:gap-[25px]">
-            <span className="text-lg">but generates</span>
-            <span className="text-3xl font-medium">3x as many leads</span>
-          </div>
-        </li>
-        <li className="flex flex-col gap-[15px] bg-dark px-[30px] py-10 rounded-[25px]">
-          <span className="text-lg text-white">Organic search drives</span>
-          <span className="text-3xl font-medium text-white">
-            <span className="text-3xl font-medium text-green">53%</span>
-            of all website traffic,
-          </span>
-          <span className="text-lg text-white">
-            making it the largest single source of traffic.
-          </span>
-        </li>
+      <ul className="flex flex-wrap gap-5 lg:gap-[30px] mb-10 lg:mb-[70px] justify-center">
+        {listItems.map(({ classes, content }, index) => (
+          <motion.li
+            key={index}
+            className={classes}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
+              transition: { duration: 0.7 },
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {content}
+          </motion.li>
+        ))}
       </ul>
       <div className="flex flex-col gap-10 lg:gap-[70px] lg:px-[185px]">
         <BlogHeadline headlineList={realWorldExamples} />

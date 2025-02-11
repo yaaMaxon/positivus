@@ -19,7 +19,7 @@ const OurJourney = () => {
       />
       <div className="relative">
         <LineIcon className="lg:hidden absolute h-full left-[48px]" />
-        <CurvedLineIcon className="hidden lg:block absolute h-full left-[234px]" />
+        <CurvedLineIcon className="hidden w-[30%] lg:block absolute h-full left-[234px]" />
         <ul className="flex flex-col gap-[35px] lg:gap-[70px]">
           {ourJourneyList.map(
             ({ year, title, description, firstIcon, secondIcon }, index) => (
@@ -32,9 +32,9 @@ const OurJourney = () => {
                     ${index === 0 && "self-start"}
                     ${index === 3 && "self-end"}`}
               >
-                <div className="hidden lg:block self-start">
-                  {firstIcon && firstIcon}
-                </div>
+                {firstIcon && (
+                  <div className="hidden lg:block self-start">{firstIcon}</div>
+                )}
                 <div
                   // className="flex flex-col lg:flex-row gap-5 lg:gap-10 items-start lg:items-baseline"
                   className={`flex flex-col lg:flex-row gap-5 lg:gap-10 items-start lg:items-baseline 
@@ -86,9 +86,9 @@ const OurJourney = () => {
                     </div>
                   </motion.div>
                 </div>
-                <div className="hidden lg:block self-end">
-                  {secondIcon && secondIcon}
-                </div>
+                {secondIcon && (
+                  <div className="hidden lg:block self-end">{secondIcon}</div>
+                )}
               </li>
             )
           )}
